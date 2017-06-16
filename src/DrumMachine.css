@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+/*.buttons {
+  
+}*/
+
+.button {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0 10px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.drum-wrapper {
+  display: grid;
+}
+
+.header, .types, .keys {
+  display: inline-grid;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  grid-gap: 10px;
+}
+
+.header {
+  grid-template-columns: repeat(16, 50px);
+  grid-template-rows: repeat(1, 50px);
+  grid-row: 1;
+  grid-column: 2;
+  justify-self: start;
+}
+
+.types {
+  justify-content: end;
+  text-align: right;
+  grid-template-columns: repeat(1, 100px);
+  grid-template-rows: repeat(4, 50px);
+  grid-column: 1;
+  grid-row: 2; 
+  justify-self: end;
+}
+
+.types div {
+  padding-right: 20px;
+}
+
+.keys {
+  align-items: flex-start;
+  grid-template-columns: repeat(16, 50px);
+  grid-template-rows: repeat(4, 50px);
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: start;
+}
+
+.keys .column .key {
+  margin-bottom: 10px;
+}
+
+.keys .column.active .key.active::before {
+  box-shadow: 0px 0px 15px 5px rgba(74, 255, 146, 0.5)
+}
+ 
+.key {
+  position: relative;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  border-radius: 2px;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.025);
+  cursor: pointer;
+}
+
+.key:first-child.active {
+  background: #dcffee;
+}
+.key:first-child.active::before {
+  background: #c9ffe4;
+}
+
+.key:nth-child(n+2).active {
+  background: #dcfeff;
+}
+
+.key:nth-child(n+2).active::before {
+  background: #c9f9ff;
+}
+
+.key:nth-child(n+3).active {
+  background: #fff8dc;
+}
+
+.key:nth-child(n+3).active::before {
+  background: #ffebc9;
+}
+
+.key:last-child.active {
+  background: #f2dcff;
+}
+
+.key:last-child.active::before {
+  background: #ebc9ff;
+}
+
+.key::before {
+  content: '';
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  border-radius: 2px;
+  background: #f3f3f3;
+  z-index: 1;
+}
+
