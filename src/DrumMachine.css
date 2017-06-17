@@ -100,8 +100,9 @@ select {
   justify-self: start;
 }
 
-.keys .column .key {
-  margin-bottom: 10px;
+.keys .column {
+  display: inline-grid;
+  grid-row-gap: 10px;
 }
 
 .keys .column.active .key:first-child.active::before {
