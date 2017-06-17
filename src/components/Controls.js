@@ -7,7 +7,7 @@ const Controls = ({ play, stop, generateBeat, changeTempo, clear, sequences }) =
       <div className="button" onClick={stop}>Stop</div>
       <select className="button" onChange={generateBeat}>
         <option value={0}>4 on the floor</option>
-        { sequences.slice(1).map((elem, i) => <option value={++i}>Sequence {i}</option>) }
+        { sequences.slice(1).map((elem, i) => <option value={++i} key={i}>Sequence {i}</option>) }
       </select>
       <select className="button" onChange={changeTempo}>
         <option value={60}>60 BMP</option>   
