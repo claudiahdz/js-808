@@ -1,8 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Crushed');
 
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
+}
+
+h1 {
+  margin: 50px 0 30px;
+  font-family: 'Crushed', sans-serif;
+  font-size: 80px;
 }
 
 .container {
@@ -13,16 +20,27 @@ body {
   text-align: center;
 }
 
-/*.buttons {
-  
-}*/
-
 .button {
   display: inline-block;
   padding: 5px 10px;
   margin: 0 10px;
-  border: 2px solid black;
+  border: transparent;
+  border: 1px solid #999;
+  border-radius: 2px;
+  color: rgba(0,0,0,.8);
+  background-color: #E6E6E6;
+  font-weight: 800;
+  text-decoration: none;
   cursor: pointer;
+}
+
+select {
+  height: 32px;
+  justify-content: center;
+  background-color: #E6E6E6;
+  font-weight: 500;
+  outline: none;
+  vertical-align: bottom;
 }
 
 .drum-wrapper {
@@ -43,6 +61,20 @@ body {
   grid-row: 1;
   grid-column: 2;
   justify-self: start;
+}
+
+.header span.active {
+  display: inline-flex;
+  width: 8px;
+  height: 8px;
+  padding: 10px;
+  margin: 0 auto;
+  border: 2px solid rgba(255, 0, 120, 0.5);
+  border-radius: 50%;
+  box-sizing: content-box;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .types {
@@ -72,8 +104,20 @@ body {
   margin-bottom: 10px;
 }
 
-.keys .column.active .key.active::before {
-  box-shadow: 0px 0px 15px 5px rgba(74, 255, 146, 0.5)
+.keys .column.active .key:first-child.active::before {
+  box-shadow: 0px 0px 15px 5px rgba(74, 255, 145, 0.5);
+}
+
+.keys .column.active .key:nth-child(n+2).active::before {
+  box-shadow: 0px 0px 15px 5px rgba(74, 215, 255, 0.5);
+}
+
+.keys .column.active .key:nth-child(n+3).active::before {
+  box-shadow: 0px 0px 15px 5px rgba(255, 190, 75, 0.5);
+}
+
+.keys .column.active .key:last-child.active::before {
+  box-shadow: 0px 0px 15px 5px rgba(160, 75, 255, 0.5);
 }
  
 .key {
@@ -84,8 +128,18 @@ body {
   border-radius: 2px;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.025);
+  background: #e6e6e6;
   cursor: pointer;
+}
+
+.key::before {
+  content: '';
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  border-radius: 2px;
+  background: #f3f3f3;
+  z-index: 1;
 }
 
 .key:first-child.active {
@@ -118,14 +172,3 @@ body {
 .key:last-child.active::before {
   background: #ebc9ff;
 }
-
-.key::before {
-  content: '';
-  position: absolute;
-  width: 70%;
-  height: 70%;
-  border-radius: 2px;
-  background: #f3f3f3;
-  z-index: 1;
-}
-
