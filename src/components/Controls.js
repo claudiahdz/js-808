@@ -11,7 +11,10 @@ const Controls = ({ play, stop, generateBeat, changeTempo, clear, sequences }) =
       </select>
       <select className="button" onChange={changeTempo}>
         <option value={60}>60 BMP</option>   
-        <option value={120}>120 BMP</option>      
+        <option value={80}>80 BMP</option>   
+        <option value={100}>100 BMP</option>   
+        <option value={120}>120 BMP</option>  
+        <option value={150}>150 BMP</option>          
         <option value={180}>180 BMP</option>      
       </select> 
       <div className="button" onClick={clear}>Clear</div>
