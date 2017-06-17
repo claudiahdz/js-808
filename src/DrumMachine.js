@@ -1,57 +1,24 @@
 import React, { Component } from 'react'
-import { Howl } from 'howler'
-import './DrumMachine.css';
 
-import kick from './audio/kick.mp3'
-import snare from './audio/snare.mp3'
-import open from './audio/open.mp3'
-import close from './audio/close.mp3'
+import { sounds, sequences } from './config.js'
 
+import Controls from './components/Controls'
 import Key from './components/Key'
 
-const _4ONTHEFLOOR = [
-  [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0],
-  [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0],
-  [0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
-]
-
-const _CLAUDIACOOL = [
-  [0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0],
-  [0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1],
-  [1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0],
-  [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0],
-]
-
-const sounds = [
-  new Howl({
-      src: [kick]
-  }), 
-  new Howl({
-      src: [snare]
-  }), 
-  new Howl({
-      src: [open]
-  }), 
-  new Howl({
-      src: [close]
-  }),
-]
+import './DrumMachine.css'
 
 class DrumMachine extends Component {
 
   constructor(props) {
     super(props)
     this.columns = []
+    this.steps = []
+    this.interval = null
+    this.currentStep = 0
     this.state = {
-      beat: Array(4).fill(Array(16).fill(false)),
-      interval: null,
-      tempo: 180,
+      beat: sequences[0],
+      tempo: 60,
     }
-  }
-
-  shouldComponentUpdate = (nextProps, nextState) => {
-    return !(this.state.interval !== nextState.interval)
   }
 
   renderKeys = () => {
@@ -77,13 +44,16 @@ class DrumMachine extends Component {
     return (1000 / (this.state.tempo * 2) * 60)
   }
 
-  playBeat = () => {
+  play = () => {
     let currentStep = 0
     let oldStep = 15
 
-    let playId = setInterval(() => {      
+    let playId = setInterval(() => {  
       this.columns[oldStep].className = 'column'
       this.columns[currentStep].className = 'column active'
+
+      this.steps[oldStep].className = ''
+      this.steps[currentStep].className = 'active'
 
       Array.from(this.columns[currentStep].children).forEach((elem, i) => {
         if (/active/.test(elem.className)) {
@@ -98,54 +68,58 @@ class DrumMachine extends Component {
         currentStep = 0
         oldStep = 15
       }
+    
+      this.currentStep = oldStep
+
     }, this.setTempo())
 
-    this.setState({ 
-      interval: playId,
-    })
+    this.interval = playId
   }
 
-  stopBeat = () => {
-    const { interval } = this.state
-    clearInterval(interval)
-    this.columns.forEach((elem) => {
-      elem.className = 'column'
-    })
+  stop = () => {
+    clearInterval(this.interval)
+    this.columns[this.currentStep].className = 'column'
+    this.steps[this.currentStep].className = ''
   }
 
-  generateBeat = () => {
-    this.setState({ beat: _4ONTHEFLOOR })
+  generateBeat = (e) => {
+    this.setState({ beat: sequences[e.target.value] })
   }
 
-  generateOTHERBeat = () => {
-    this.setState({ beat: _CLAUDIACOOL })
+  changeTempo = (e) => {
+    this.setState({ tempo: e.target.value })
   }
 
-  eraseBeat = () => {
-    this.setState({ beat: Array(64).fill(false) })
-    this.stopBeat()
+  changeVolume = () => {
+    // sound.volume(value);
+  }
+
+  clear = () => {
+    this.setState({ beat: Array(64).fill(0) })
+    this.stop()
   }
 
   render() {
     return (
       <div className="container">
         <h1>JS-808 Sequencer</h1>
-        <div className="buttons">
-          <div className="button" onClick={this.playBeat}>PLAY BEAT</div>
-          <div className="button" onClick={this.stopBeat}>STOP BEAT</div>
-          <div className="button" onClick={this.generateBeat}>NEW BEAT</div>
-          <div className="button" onClick={this.generateOTHERBeat}>OTHER BEAT</div>
-          <div className="button" onClick={this.eraseBeat}>ERASE BEAT</div>
-        </div>
+        <Controls 
+          play={this.play} 
+          stop={this.stop} 
+          generateBeat={this.generateBeat} 
+          changeTempo={this.changeTempo}
+          clear={this.clear} 
+          sequences={sequences} 
+        />
         <div className="drum-wrapper">
+          <div className="header">
+            { Array(16).fill(null).map((elem, i) => <span key={i} ref={(elem) => { this.steps[i] = elem} }>{i+1}</span>) }
+          </div>
           <div className="types">
             <div className="type">Kick</div>
             <div className="type">Snare</div>
             <div className="type">Open Hat</div>
             <div className="type">Closed Hat</div>
-          </div>
-          <div className="header">
-            { Array(16).fill(null).map((elem, i) => <span key={i}>{i+1}</span>) }
           </div>
           <div className="keys">
             { this.renderKeys() }
@@ -156,4 +130,4 @@ class DrumMachine extends Component {
   }
 }
 
-export default DrumMachine;
+export default DrumMachine
