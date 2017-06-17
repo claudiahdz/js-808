@@ -15,9 +15,9 @@ class DrumMachine extends Component {
     this.steps = []
     this.interval = null
     this.currentStep = 0
+    this.tempo = 60
     this.state = {
       beat: sequences[0],
-      tempo: 60,
     }
   }
 
@@ -41,7 +41,7 @@ class DrumMachine extends Component {
   }
 
   setTempo = () => {
-    return (1000 / (this.state.tempo * 2) * 60)
+    return (1000 / (this.tempo * 2) * 60)
   }
 
   play = () => {
@@ -87,7 +87,7 @@ class DrumMachine extends Component {
   }
 
   changeTempo = (e) => {
-    this.setState({ tempo: e.target.value })
+    this.tempo = e.target.value
   }
 
   changeVolume = () => {
