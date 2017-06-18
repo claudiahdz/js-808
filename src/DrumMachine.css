@@ -20,8 +20,13 @@ h1 {
   text-align: center;
 }
 
+.buttons {
+  margin-bottom: 20px;
+}
+
 .button {
   display: inline-block;
+  min-width: 60px;
   padding: 5px 10px;
   margin: 0 10px;
   border: transparent;

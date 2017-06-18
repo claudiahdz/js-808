@@ -1,9 +1,9 @@
 import { Howl } from 'howler'
 
-import kick from './audio/kick.mp3'
-import snare from './audio/snare.mp3'
-import open from './audio/open.mp3'
-import close from './audio/close.mp3'
+import kick from 'audio/kick.mp3'
+import snare from 'audio/snare.mp3'
+import open from 'audio/open.mp3'
+import close from 'audio/close.mp3'
 
 const _4ONTHEFLOOR = [
   [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0],
