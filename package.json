@@ -3,12 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "enzyme": "^2.8.2",
     "howler": "^2.0.4",
     "react": "^15.6.0",
     "react-dom": "^15.6.0"
   },
   "devDependencies": {
-    "react-scripts": "1.0.7"
+    "react-addons-test-utils": "^15.6.0",
+    "react-dom": "^15.6.1",
+    "react-scripts": "1.0.7",
+    "react-test-renderer": "^15.6.1"
   },
   "scripts": {
     "start": "react-scripts start",
