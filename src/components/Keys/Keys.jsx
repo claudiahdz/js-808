@@ -1,5 +1,8 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import Key from 'components/Key/Key'
+
 
 const Keys = ({ beat, updateBeat, status, currentStep }) => {
   let active
@@ -35,6 +38,13 @@ const Keys = ({ beat, updateBeat, status, currentStep }) => {
       {columns}
     </div>
   )
+}
+
+Keys.propTypes = {
+  beat: PropTypes.array.isRequired,
+  updateBeat: PropTypes.func.isRequired,
+  status: PropTypes.string.isRequired,
+  currentStep: PropTypes.number.isRequired
 }
 
 export default Keys
