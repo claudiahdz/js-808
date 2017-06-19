@@ -10,12 +10,15 @@ import './DrumMachine.css'
 
 class DrumMachine extends Component {
 
-  state = {
-    beat: sequences[0],
-    currentStep: 0,
-    tempo: 60,
-    interval: null,
-    status: 'stop' 
+  constructor(props) {
+    super(props)
+    this.interval = null
+    this.state = {
+      beat: sequences[0],
+      currentStep: 0,
+      tempo: 60,
+      status: 'stop' 
+    }
   }
 
   play = () => {
@@ -23,7 +26,7 @@ class DrumMachine extends Component {
     const setTempo = (1000 / (tempo * 2) * 60)
     let currentStep = this.state.currentStep
 
-    let playId = setInterval(() => {
+    const playId = setInterval(() => {
       const { beat } = this.state
 
       for(let j = 0; j < 4; j++) { 
@@ -39,25 +42,23 @@ class DrumMachine extends Component {
       this.setState({ currentStep })
     }, setTempo)
 
-    this.setState({ 
-      status: 'play',
-      interval: playId 
-    })
+    this.setState({ status: 'play' })
+    this.interval = playId
   }
 
   stop = () => {
-    const { interval } = this.state
+    clearInterval(this.interval)
+    this.interval = null
     this.setState({ 
       status: 'stop',
       currentStep: 0,
      })
-    clearInterval(interval)
   }
 
   pause = () => {
-    const { interval } = this.state
+    clearInterval(this.interval)
+    this.interval = null
     this.setState({ status: 'pause' })
-    clearInterval(interval)
   }
 
   clear = () => {
@@ -76,19 +77,30 @@ class DrumMachine extends Component {
   }
 
   changeTempo = (e) => {
-    const { status } = this.state
-    this.pause()
+    console.log(this.state.currentStep)
+    clearInterval(this.interval)
+    this.interval = null
     this.setState({ tempo: e.target.value }, () => {
-      if (status === 'play') {
+      if (this.state.status === 'play') {
         this.play()
-      }      
-    })
+      }
+    })   
   }
 
   changeVolume = (sound, volume) => {
     console.log(sound, volume)
     // sound.volume(value);
   }
+
+    //   var calculateBPM = function() {
+
+    //   _stepDelay = Math.round(((_sampleRate * _minuteInSeconds) / (_beatsPerMinute * _totalSteps)) / _totalSteps);
+
+    //   return _stepDelay;
+
+    // };
+
+     // 1 / (4 * BPM / (60 * 1000))
 
   render() {
     const { beat, currentStep, status } = this.state
