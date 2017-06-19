@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { sounds, sequences } from 'config/config'
 
 import Controls from 'components/Controls/Controls'
+import Steps from 'components/Steps/Steps'
 import Keys from 'components/Keys/Keys'
 
 import './DrumMachine.css'
@@ -18,11 +19,8 @@ class DrumMachine extends Component {
 
   play = () => {
     const { tempo } = this.state
-    let currentStep = this.state.currentStep
-
     const setTempo = (1000 / (tempo * 2) * 60)
-
-    this.setState({ status: 'play' })
+    let currentStep = this.state.currentStep
 
     let playId = setInterval(() => {
       const { beat } = this.state
@@ -40,13 +38,18 @@ class DrumMachine extends Component {
       this.setState({ currentStep })
     }, setTempo)
 
-    this.setState({ interval: playId })
+    this.setState({ 
+      status: 'play',
+      interval: playId 
+    })
   }
 
   stop = () => {
     const { interval } = this.state
-    this.setState({ status: 'stop' })
-    this.setState({ currentStep: 0 })
+    this.setState({ 
+      status: 'stop',
+      currentStep: 0,
+     })
     clearInterval(interval)
   }
 
@@ -58,7 +61,7 @@ class DrumMachine extends Component {
 
   clear = () => {
     this.stop()
-    this.changeBeat(Array(4).fill(Array(16).fill(0)))
+    this.changeBeat(Array(4).fill(Array(16).fill(0)).map(r => r.slice()))
   }
 
   changeBeat = (beat) => {
@@ -67,17 +70,18 @@ class DrumMachine extends Component {
 
   updateBeat = (row, column) => {
     let beat = this.state.beat
-    beat[row][column] = !this.state.beat[row][column]
+    beat[row][column] = +!this.state.beat[row][column]
     this.setState({ beat })
   }
 
   changeTempo = (e) => {
     const { status } = this.state
     this.pause()
-    this.setState({ tempo: e.target.value })
-    if (status === 'play') {
-      this.play()
-    }
+    this.setState({ tempo: e.target.value }, () => {
+      if (status === 'play') {
+        this.play()
+      }      
+    })
   }
 
   changeVolume = () => {
@@ -86,7 +90,6 @@ class DrumMachine extends Component {
 
   render() {
     const { beat, currentStep, status } = this.state
-    let active
 
     return (
       <div className="container">
@@ -101,13 +104,7 @@ class DrumMachine extends Component {
           changeTempo={this.changeTempo}
         />
         <div className="drum-wrapper">
-          <div className="header">
-            { Array.from(Array(16)).map((elem, i) => {
-                active = (currentStep === i) && (status === 'play')
-                return <span key={i} className={`${active && 'active'}`}>{i+1}</span>
-              })
-            }
-          </div>
+          <Steps status={status} currentStep={currentStep} />
           <div className="types">
             <div className="type">Kick</div>
             <div className="type">Snare</div>
@@ -116,8 +113,8 @@ class DrumMachine extends Component {
           </div>
           <Keys 
             beat={beat} 
-            currentStep={currentStep}
             status={status} 
+            currentStep={currentStep}
             updateBeat={this.updateBeat}
           />
         </div>

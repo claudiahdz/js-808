@@ -52,7 +52,7 @@ select {
   display: grid;
 }
 
-.header, .types, .keys {
+.steps, .types, .keys {
   display: inline-grid;
   justify-content: center;
   align-items: center;
@@ -60,7 +60,7 @@ select {
   grid-gap: 10px;
 }
 
-.header {
+.steps {
   grid-template-columns: repeat(16, 50px);
   grid-template-rows: repeat(1, 50px);
   grid-row: 1;
@@ -68,7 +68,7 @@ select {
   justify-self: start;
 }
 
-.header span.active {
+.steps span.active {
   display: inline-flex;
   width: 8px;
   height: 8px;
