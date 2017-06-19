@@ -2,16 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { sequences } from 'config/config'
 
-const Controls = ({ status, play, stop, pause, clear, changeBeat, changeTempo }) => {
+const Controls = ({ status, play, stop, pause, clear, changeBeat, changeTempo, tempo } ) => {
   const isPlaying = (status === 'play')
-  const tempos = (() => {
-    let tempos = []
-    for(let i = 60; i <= 180; i=i+20) {
-      tempos.push(<option key={i} value={i}>{`${i} BMP`}</option>)   
-    }
-    return tempos
-  })()
-  
+
   return (
     <div className="buttons">
       <div className="button" onClick={isPlaying ? pause : play}>{isPlaying ? 'Pause' : 'Play'}</div>
@@ -20,9 +13,8 @@ const Controls = ({ status, play, stop, pause, clear, changeBeat, changeTempo })
         <option value={0}>4 on the floor</option>
         { sequences.slice(1).map((elem, i) => <option value={++i} key={i}>Sequence {i}</option>) }
       </select>
-      <select className="button" onChange={(e) => changeTempo(e)}>
-        { tempos }     
-      </select> 
+      <input type="range" min="60" max="180" value={tempo} onChange={(e) => changeTempo(e.target.value)} /> 
+      <span>{tempo} BMP</span>
       <div className="button" onClick={clear}>Clear</div>
     </div>    
   )
@@ -30,6 +22,7 @@ const Controls = ({ status, play, stop, pause, clear, changeBeat, changeTempo })
 
 Controls.propTypes = {
   status: PropTypes.string.isRequired,
+  tempo: PropTypes.number.isRequired,
   play: PropTypes.func.isRequired,
   stop: PropTypes.func.isRequired,
   pause: PropTypes.func.isRequired,

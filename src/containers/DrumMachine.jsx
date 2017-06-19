@@ -63,6 +63,7 @@ class DrumMachine extends Component {
 
   clear = () => {
     this.stop()
+    this.setState({ tempo: 60 })
     this.changeBeat(Array(4).fill(Array(16).fill(0)).map(r => r.slice()))
   }
 
@@ -76,10 +77,10 @@ class DrumMachine extends Component {
     this.setState({ beat })
   }
 
-  changeTempo = (e) => {
+  changeTempo = (t) => {
     clearInterval(this.interval)
     this.interval = null
-    this.setState({ tempo: e.target.value }, () => {
+    this.setState({ tempo: +t }, () => {
       if (this.state.status === 'play') {
         this.play()
       }
@@ -92,13 +93,14 @@ class DrumMachine extends Component {
   }
 
   render() {
-    const { beat, currentStep, status } = this.state
+    const { beat, currentStep, status, tempo } = this.state
 
     return (
       <div className="container">
         <h1>JS-808 Sequencer</h1>
         <Controls 
           status={status}
+          tempo={tempo}
           play={this.play}
           stop={this.stop}
           pause={this.pause}
@@ -108,7 +110,8 @@ class DrumMachine extends Component {
         />
         <div className="drum-wrapper">
           <Steps status={status} currentStep={currentStep} />
-          <Types changeVolume={this.changeVolume} 
+          <Types 
+            changeVolume={this.changeVolume} 
           />
           <Keys 
             beat={beat} 
