@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { sounds, sequences } from 'config'
+import { sounds, sequences } from 'config/config'
 
 class Controls extends Component {
 
@@ -17,6 +17,7 @@ class Controls extends Component {
   // Controls
   play = () => {
     const { columns, steps } = this.props
+
     let currentStep = this.currentStep
     let oldStep = this.oldStep
 
@@ -55,12 +56,12 @@ class Controls extends Component {
 
   stop = () => {
     const { columns, steps } = this.props
+    this.setState({ status: 'stop' })
     clearInterval(this.interval)
     columns[this.oldStep].className = 'column'
     steps[this.oldStep].className = ''
     this.currentStep = 0
     this.oldStep = 15
-    this.setState({ status: 'stop' })
   }
 
   pause = () => {
@@ -75,10 +76,10 @@ class Controls extends Component {
 
   // Options
   changeTempo = (e) => {
-    this.pause()
+    this.stop()
     this.tempo = e.target.value
     if (this.state.status === 'play') {
-        this.play()
+      this.play()
     }
   }
 
@@ -90,13 +91,13 @@ class Controls extends Component {
     const { updateBeat } = this.props
     const isPlaying = this.state.status === 'play'
 
-    const tempos = () => {
+    const tempos = (() => {
       let tempos = []
       for(let i = 60; i <= 180; i=i+20) {
         tempos.push(<option key={i} value={i}>{`${i} BMP`}</option>)   
       }
       return tempos
-    }
+    })()
     
     return (
       <div className="buttons">
@@ -107,7 +108,7 @@ class Controls extends Component {
           { sequences.slice(1).map((elem, i) => <option value={++i} key={i}>Sequence {i}</option>) }
         </select>
         <select className="button" onChange={this.changeTempo}>
-          { tempos() }     
+          { tempos }     
         </select> 
         <div className="button" onClick={this.clear}>Clear</div>
       </div>    

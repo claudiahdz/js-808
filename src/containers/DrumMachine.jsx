@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import { sequences } from 'config'
+import { sequences } from 'config/config'
 
 import Controls from 'components/Controls/Controls'
 import Keys from 'components/Keys/Keys'
 
-import 'DrumMachine.css'
+import './DrumMachine.css'
 
 class DrumMachine extends Component {
 
