@@ -1,18 +1,26 @@
 import React from 'react'
 import Key from 'components/Key/Key'
 
-const Keys = ({ beat, columns }) => {
+const Keys = ({ beat, updateBeat, status, currentStep }) => {
+  let active
   let column = []
-  let clmns = []
+  let columns = []
 
   for(let i = 0; i < 16; i++) {
+    active = (currentStep === i) && (status === 'play')
+
     for(let j = 0; j < 4; j++) { 
+
       column.push(<Key key={`row${j}-column${i}`} 
-                       active={beat[j][i]} 
+                       active={beat[j][i]}
+                       updateBeat={updateBeat}
+                       row={j}
+                       column={i} 
                   />)
     }
-    clmns.push(
-      <div className="column" key={`column${i}`} ref={(elem) => { columns[i] = elem} }>
+
+    columns.push(
+      <div className={`column ${active && 'active'}`} key={`column${i}`}>
         {column}
       </div>
     )
@@ -20,7 +28,7 @@ const Keys = ({ beat, columns }) => {
   }
   return (
     <div className="keys">
-      {clmns}
+      {columns}
     </div>
   )
 }
