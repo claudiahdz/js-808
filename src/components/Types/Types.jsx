@@ -9,14 +9,10 @@ const Types = ({ changeVolume }) => {
       { types.map((type, i) => { return (
           <div className="type" key={i}>
             {type}
-            <div>
-                <span onClick={() => {changeVolume(i, 1)}}>+</span>
-                <span onClick={() => {changeVolume(i, 0)}}>-</span>
-            </div>
+            <input type="range" defaultValue="100" onChange={(e) => changeVolume(i, e.target.value)} /> 
           </div>
-
-
-        )}) }
+        )}) 
+      }
     </div>
   )
 }

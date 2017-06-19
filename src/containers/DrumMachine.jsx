@@ -77,7 +77,6 @@ class DrumMachine extends Component {
   }
 
   changeTempo = (e) => {
-    console.log(this.state.currentStep)
     clearInterval(this.interval)
     this.interval = null
     this.setState({ tempo: e.target.value }, () => {
@@ -87,20 +86,10 @@ class DrumMachine extends Component {
     })   
   }
 
-  changeVolume = (sound, volume) => {
-    console.log(sound, volume)
-    // sound.volume(value);
+  changeVolume = (sound, v) => {
+    const volume = v * .01
+    sounds[sound].volume(volume)
   }
-
-    //   var calculateBPM = function() {
-
-    //   _stepDelay = Math.round(((_sampleRate * _minuteInSeconds) / (_beatsPerMinute * _totalSteps)) / _totalSteps);
-
-    //   return _stepDelay;
-
-    // };
-
-     // 1 / (4 * BPM / (60 * 1000))
 
   render() {
     const { beat, currentStep, status } = this.state
@@ -119,7 +108,8 @@ class DrumMachine extends Component {
         />
         <div className="drum-wrapper">
           <Steps status={status} currentStep={currentStep} />
-          <Types changeVolume={this.changeVolume} />
+          <Types changeVolume={this.changeVolume} 
+          />
           <Keys 
             beat={beat} 
             status={status} 
