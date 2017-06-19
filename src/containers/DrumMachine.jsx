@@ -3,6 +3,7 @@ import { sounds, sequences } from 'config/config'
 
 import Controls from 'components/Controls/Controls'
 import Steps from 'components/Steps/Steps'
+import Types from 'components/Types/Types'
 import Keys from 'components/Keys/Keys'
 
 import './DrumMachine.css'
@@ -84,7 +85,8 @@ class DrumMachine extends Component {
     })
   }
 
-  changeVolume = () => {
+  changeVolume = (sound, volume) => {
+    console.log(sound, volume)
     // sound.volume(value);
   }
 
@@ -105,12 +107,7 @@ class DrumMachine extends Component {
         />
         <div className="drum-wrapper">
           <Steps status={status} currentStep={currentStep} />
-          <div className="types">
-            <div className="type">Kick</div>
-            <div className="type">Snare</div>
-            <div className="type">Open Hat</div>
-            <div className="type">Closed Hat</div>
-          </div>
+          <Types changeVolume={this.changeVolume} />
           <Keys 
             beat={beat} 
             status={status} 
