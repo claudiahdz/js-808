@@ -1,21 +1,29 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import { shallow } from 'enzyme'
+import Key from './Key'
 
-const Key = ({ active, updateBeat, row, column }) => {
-  return (
-    <div 
-      className={`key ${active && 'active'}`} 
-      onClick={() => updateBeat(row, column)}
-    >
-    </div>
-  )
-}
+describe('Key', () => {
+  const defaultProps = {
+    active: 0,
+    updateBeat: () => {},
+    row: 0,
+    column: 0,
+  }
 
-Key.propTypes = {
-  active: PropTypes.number.isRequired,
-  updateBeat: PropTypes.func.isRequired,
-  row: PropTypes.number.isRequired,
-  column: PropTypes.number.isRequired
-}
+  it('renders the component correctly', () => {
+    const key = shallow(<Key {...defaultProps} />)
+    expect(key).toMatchSnapshot()
+  })
 
-export default Key
+  it('calls updateBeat when clicked', () => {
+    const props = {
+      ...defaultProps,
+      updateBeat: jest.fn()
+    }
+    const key = shallow(<Key {...props} />)
+    key.simulate('click')
+    
+    expect(props.updateBeat).toHaveBeenCalledWith(props.row, props.column)
+  })
+})
+

@@ -1,41 +1,99 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { sequences } from 'config/config'
+import { shallow, render, mount } from 'enzyme'
+import Controls from './Controls'
 
-const Controls = ({ status, play, stop, pause, clear, changeBeat, changeTempo }) => {
-  const isPlaying = (status === 'play')
-  const tempos = (() => {
-    let tempos = []
-    for(let i = 60; i <= 180; i=i+20) {
-      tempos.push(<option key={i} value={i}>{`${i} BMP`}</option>)   
+describe('Controls', () => {
+  const defaultProps = {
+    status: 'stop',
+    play: () => {},
+    stop: () => {},
+    pause: () => {},
+    clear: () => {},
+    changeBeat: () => {},
+    changeTempo: () => {},
+    tempo: 60,    
+  }
+
+  it('renders the component correctly', () => {
+    const controls = shallow(<Controls {...defaultProps} />)
+    expect(controls).toMatchSnapshot()
+  })
+
+  it('plays beat', () => {
+    const props = { 
+      ...defaultProps,
+      play: jest.fn()
     }
-    return tempos
-  })()
-  
-  return (
-    <div className="buttons">
-      <div className="button" onClick={isPlaying ? pause : play}>{isPlaying ? 'Pause' : 'Play'}</div>
-      <div className="button" onClick={stop}>Stop</div>
-      <select className="button" onChange={(e) => changeBeat(sequences[e.target.value])}>
-        <option value={0}>4 on the floor</option>
-        { sequences.slice(1).map((elem, i) => <option value={++i} key={i}>Sequence {i}</option>) }
-      </select>
-      <select className="button" onChange={(e) => changeTempo(e)}>
-        { tempos }     
-      </select> 
-      <div className="button" onClick={clear}>Clear</div>
-    </div>    
-  )
-}
+    const controls = shallow(<Controls {...props} />)
+    const button = controls.find('.button').first()
 
-Controls.propTypes = {
-  status: PropTypes.string.isRequired,
-  play: PropTypes.func.isRequired,
-  stop: PropTypes.func.isRequired,
-  pause: PropTypes.func.isRequired,
-  clear: PropTypes.func.isRequired,
-  changeBeat: PropTypes.func.isRequired,
-  changeTempo: PropTypes.func.isRequired
-}
+    button.simulate('click')
+    expect(props.play).toHaveBeenCalled()
+  })
 
-export default Controls
+  it('pauses beat', () => {
+    const props = { 
+      ...defaultProps,
+      status: 'play',
+      pause: jest.fn()
+    }
+    const controls = shallow(<Controls {...props} />)
+    const button = controls.find('.button').first()
+
+    button.simulate('click')
+    expect(props.pause).toHaveBeenCalled()
+  })
+
+  it('stops beat', () => {
+    const props = { 
+      ...defaultProps,
+      stop: jest.fn()
+    }
+    const controls = shallow(<Controls {...props} />)
+    const button = controls.find('.button').at(1)
+
+    button.simulate('click')
+    expect(props.stop).toHaveBeenCalled()
+  })
+
+  it('changes tempo', () => {
+    const props = { 
+      ...defaultProps,
+      changeTempo: jest.fn()
+    }
+    const e = { target: {value: 60} }
+
+    const controls = shallow(<Controls {...props} />)
+    const input = controls.find('input')
+    input.first().simulate('change', e)
+
+    expect(props.changeTempo).toHaveBeenCalled()
+  })
+
+  it('changes beat', () => {
+    const props = { 
+      ...defaultProps,
+      changeBeat: jest.fn()
+    }
+    const e = { target: {value: 0} }
+
+    const controls = shallow(<Controls {...props} />)
+    const select = controls.find('select')
+    select.first().simulate('change', e)
+
+    expect(props.changeBeat).toHaveBeenCalled()
+  })
+
+  it('clears beat', () => {
+    const props = { 
+      ...defaultProps,
+      clear: jest.fn()
+    }
+    const controls = shallow(<Controls {...props} />)
+    const button = controls.find('.button').at(3)
+
+    button.simulate('click')
+    expect(props.clear).toHaveBeenCalled()
+  })
+
+})

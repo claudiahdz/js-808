@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Keys renders 64 keys 1`] = `
+exports[`Keys renders the component correctly 1`] = `
 ShallowWrapper {
   "complexSelector": ComplexSelector {
     "buildPredicate": [Function],
@@ -12,259 +12,451 @@ ShallowWrapper {
     className="keys"
 >
     <div
-        className="column"
+        className="column false"
     >
         <Key
             active={0}
+            column={0}
+            row={0}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={0}
+            row={1}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={0}
+            row={2}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={0}
+            row={3}
+            updateBeat={[Function]}
         />
     </div>
     <div
-        className="column"
+        className="column false"
     >
         <Key
             active={0}
+            column={1}
+            row={0}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={1}
+            row={1}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={1}
+            row={2}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={1}
+            row={3}
+            updateBeat={[Function]}
         />
     </div>
     <div
-        className="column"
+        className="column false"
     >
         <Key
             active={0}
+            column={2}
+            row={0}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={2}
+            row={1}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={2}
+            row={2}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={2}
+            row={3}
+            updateBeat={[Function]}
         />
     </div>
     <div
-        className="column"
+        className="column false"
     >
         <Key
             active={0}
+            column={3}
+            row={0}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={3}
+            row={1}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={3}
+            row={2}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={3}
+            row={3}
+            updateBeat={[Function]}
         />
     </div>
     <div
-        className="column"
+        className="column false"
     >
         <Key
             active={0}
+            column={4}
+            row={0}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={4}
+            row={1}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={4}
+            row={2}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={4}
+            row={3}
+            updateBeat={[Function]}
         />
     </div>
     <div
-        className="column"
+        className="column false"
     >
         <Key
             active={0}
+            column={5}
+            row={0}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={5}
+            row={1}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={5}
+            row={2}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={5}
+            row={3}
+            updateBeat={[Function]}
         />
     </div>
     <div
-        className="column"
+        className="column false"
     >
         <Key
             active={0}
+            column={6}
+            row={0}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={6}
+            row={1}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={6}
+            row={2}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={6}
+            row={3}
+            updateBeat={[Function]}
         />
     </div>
     <div
-        className="column"
+        className="column false"
     >
         <Key
             active={0}
+            column={7}
+            row={0}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={7}
+            row={1}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={7}
+            row={2}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={7}
+            row={3}
+            updateBeat={[Function]}
         />
     </div>
     <div
-        className="column"
+        className="column false"
     >
         <Key
             active={0}
+            column={8}
+            row={0}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={8}
+            row={1}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={8}
+            row={2}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={8}
+            row={3}
+            updateBeat={[Function]}
         />
     </div>
     <div
-        className="column"
+        className="column false"
     >
         <Key
             active={0}
+            column={9}
+            row={0}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={9}
+            row={1}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={9}
+            row={2}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={9}
+            row={3}
+            updateBeat={[Function]}
         />
     </div>
     <div
-        className="column"
+        className="column false"
     >
         <Key
             active={0}
+            column={10}
+            row={0}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={10}
+            row={1}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={10}
+            row={2}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={10}
+            row={3}
+            updateBeat={[Function]}
         />
     </div>
     <div
-        className="column"
+        className="column false"
     >
         <Key
             active={0}
+            column={11}
+            row={0}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={11}
+            row={1}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={11}
+            row={2}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={11}
+            row={3}
+            updateBeat={[Function]}
         />
     </div>
     <div
-        className="column"
+        className="column false"
     >
         <Key
             active={0}
+            column={12}
+            row={0}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={12}
+            row={1}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={12}
+            row={2}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={12}
+            row={3}
+            updateBeat={[Function]}
         />
     </div>
     <div
-        className="column"
+        className="column false"
     >
         <Key
             active={0}
+            column={13}
+            row={0}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={13}
+            row={1}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={13}
+            row={2}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={13}
+            row={3}
+            updateBeat={[Function]}
         />
     </div>
     <div
-        className="column"
+        className="column false"
     >
         <Key
             active={0}
+            column={14}
+            row={0}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={14}
+            row={1}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={14}
+            row={2}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={14}
+            row={3}
+            updateBeat={[Function]}
         />
     </div>
     <div
-        className="column"
+        className="column false"
     >
         <Key
             active={0}
+            column={15}
+            row={0}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={15}
+            row={1}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={15}
+            row={2}
+            updateBeat={[Function]}
         />
         <Key
             active={0}
+            column={15}
+            row={3}
+            updateBeat={[Function]}
         />
     </div>
 </div>,
@@ -273,259 +465,451 @@ ShallowWrapper {
       className="keys"
 >
       <div
-            className="column"
+            className="column false"
       >
             <Key
                   active={0}
+                  column={0}
+                  row={0}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={0}
+                  row={1}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={0}
+                  row={2}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={0}
+                  row={3}
+                  updateBeat={[Function]}
             />
       </div>
       <div
-            className="column"
+            className="column false"
       >
             <Key
                   active={0}
+                  column={1}
+                  row={0}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={1}
+                  row={1}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={1}
+                  row={2}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={1}
+                  row={3}
+                  updateBeat={[Function]}
             />
       </div>
       <div
-            className="column"
+            className="column false"
       >
             <Key
                   active={0}
+                  column={2}
+                  row={0}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={2}
+                  row={1}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={2}
+                  row={2}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={2}
+                  row={3}
+                  updateBeat={[Function]}
             />
       </div>
       <div
-            className="column"
+            className="column false"
       >
             <Key
                   active={0}
+                  column={3}
+                  row={0}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={3}
+                  row={1}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={3}
+                  row={2}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={3}
+                  row={3}
+                  updateBeat={[Function]}
             />
       </div>
       <div
-            className="column"
+            className="column false"
       >
             <Key
                   active={0}
+                  column={4}
+                  row={0}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={4}
+                  row={1}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={4}
+                  row={2}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={4}
+                  row={3}
+                  updateBeat={[Function]}
             />
       </div>
       <div
-            className="column"
+            className="column false"
       >
             <Key
                   active={0}
+                  column={5}
+                  row={0}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={5}
+                  row={1}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={5}
+                  row={2}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={5}
+                  row={3}
+                  updateBeat={[Function]}
             />
       </div>
       <div
-            className="column"
+            className="column false"
       >
             <Key
                   active={0}
+                  column={6}
+                  row={0}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={6}
+                  row={1}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={6}
+                  row={2}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={6}
+                  row={3}
+                  updateBeat={[Function]}
             />
       </div>
       <div
-            className="column"
+            className="column false"
       >
             <Key
                   active={0}
+                  column={7}
+                  row={0}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={7}
+                  row={1}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={7}
+                  row={2}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={7}
+                  row={3}
+                  updateBeat={[Function]}
             />
       </div>
       <div
-            className="column"
+            className="column false"
       >
             <Key
                   active={0}
+                  column={8}
+                  row={0}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={8}
+                  row={1}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={8}
+                  row={2}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={8}
+                  row={3}
+                  updateBeat={[Function]}
             />
       </div>
       <div
-            className="column"
+            className="column false"
       >
             <Key
                   active={0}
+                  column={9}
+                  row={0}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={9}
+                  row={1}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={9}
+                  row={2}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={9}
+                  row={3}
+                  updateBeat={[Function]}
             />
       </div>
       <div
-            className="column"
+            className="column false"
       >
             <Key
                   active={0}
+                  column={10}
+                  row={0}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={10}
+                  row={1}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={10}
+                  row={2}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={10}
+                  row={3}
+                  updateBeat={[Function]}
             />
       </div>
       <div
-            className="column"
+            className="column false"
       >
             <Key
                   active={0}
+                  column={11}
+                  row={0}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={11}
+                  row={1}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={11}
+                  row={2}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={11}
+                  row={3}
+                  updateBeat={[Function]}
             />
       </div>
       <div
-            className="column"
+            className="column false"
       >
             <Key
                   active={0}
+                  column={12}
+                  row={0}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={12}
+                  row={1}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={12}
+                  row={2}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={12}
+                  row={3}
+                  updateBeat={[Function]}
             />
       </div>
       <div
-            className="column"
+            className="column false"
       >
             <Key
                   active={0}
+                  column={13}
+                  row={0}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={13}
+                  row={1}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={13}
+                  row={2}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={13}
+                  row={3}
+                  updateBeat={[Function]}
             />
       </div>
       <div
-            className="column"
+            className="column false"
       >
             <Key
                   active={0}
+                  column={14}
+                  row={0}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={14}
+                  row={1}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={14}
+                  row={2}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={14}
+                  row={3}
+                  updateBeat={[Function]}
             />
       </div>
       <div
-            className="column"
+            className="column false"
       >
             <Key
                   active={0}
+                  column={15}
+                  row={0}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={15}
+                  row={1}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={15}
+                  row={2}
+                  updateBeat={[Function]}
             />
             <Key
                   active={0}
+                  column={15}
+                  row={3}
+                  updateBeat={[Function]}
             />
       </div>
 </div>,
@@ -613,7 +997,8 @@ ShallowWrapper {
                         ],
                       ]
         }
-        columns={[Function]}
+        currentStep={0}
+        status="stop"
         updateBeat={[Function]}
 />,
       "_debugID": 1,
@@ -697,7 +1082,8 @@ ShallowWrapper {
               0,
             ],
           ],
-          "columns": [Function],
+          "currentStep": 0,
+          "status": "stop",
           "updateBeat": [Function],
         },
         "refs": Object {},
@@ -724,259 +1110,451 @@ ShallowWrapper {
           className="keys"
 >
           <div
-                    className="column"
+                    className="column false"
           >
                     <Key
                               active={0}
+                              column={0}
+                              row={0}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={0}
+                              row={1}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={0}
+                              row={2}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={0}
+                              row={3}
+                              updateBeat={[Function]}
                     />
           </div>
           <div
-                    className="column"
+                    className="column false"
           >
                     <Key
                               active={0}
+                              column={1}
+                              row={0}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={1}
+                              row={1}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={1}
+                              row={2}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={1}
+                              row={3}
+                              updateBeat={[Function]}
                     />
           </div>
           <div
-                    className="column"
+                    className="column false"
           >
                     <Key
                               active={0}
+                              column={2}
+                              row={0}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={2}
+                              row={1}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={2}
+                              row={2}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={2}
+                              row={3}
+                              updateBeat={[Function]}
                     />
           </div>
           <div
-                    className="column"
+                    className="column false"
           >
                     <Key
                               active={0}
+                              column={3}
+                              row={0}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={3}
+                              row={1}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={3}
+                              row={2}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={3}
+                              row={3}
+                              updateBeat={[Function]}
                     />
           </div>
           <div
-                    className="column"
+                    className="column false"
           >
                     <Key
                               active={0}
+                              column={4}
+                              row={0}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={4}
+                              row={1}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={4}
+                              row={2}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={4}
+                              row={3}
+                              updateBeat={[Function]}
                     />
           </div>
           <div
-                    className="column"
+                    className="column false"
           >
                     <Key
                               active={0}
+                              column={5}
+                              row={0}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={5}
+                              row={1}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={5}
+                              row={2}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={5}
+                              row={3}
+                              updateBeat={[Function]}
                     />
           </div>
           <div
-                    className="column"
+                    className="column false"
           >
                     <Key
                               active={0}
+                              column={6}
+                              row={0}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={6}
+                              row={1}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={6}
+                              row={2}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={6}
+                              row={3}
+                              updateBeat={[Function]}
                     />
           </div>
           <div
-                    className="column"
+                    className="column false"
           >
                     <Key
                               active={0}
+                              column={7}
+                              row={0}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={7}
+                              row={1}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={7}
+                              row={2}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={7}
+                              row={3}
+                              updateBeat={[Function]}
                     />
           </div>
           <div
-                    className="column"
+                    className="column false"
           >
                     <Key
                               active={0}
+                              column={8}
+                              row={0}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={8}
+                              row={1}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={8}
+                              row={2}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={8}
+                              row={3}
+                              updateBeat={[Function]}
                     />
           </div>
           <div
-                    className="column"
+                    className="column false"
           >
                     <Key
                               active={0}
+                              column={9}
+                              row={0}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={9}
+                              row={1}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={9}
+                              row={2}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={9}
+                              row={3}
+                              updateBeat={[Function]}
                     />
           </div>
           <div
-                    className="column"
+                    className="column false"
           >
                     <Key
                               active={0}
+                              column={10}
+                              row={0}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={10}
+                              row={1}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={10}
+                              row={2}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={10}
+                              row={3}
+                              updateBeat={[Function]}
                     />
           </div>
           <div
-                    className="column"
+                    className="column false"
           >
                     <Key
                               active={0}
+                              column={11}
+                              row={0}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={11}
+                              row={1}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={11}
+                              row={2}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={11}
+                              row={3}
+                              updateBeat={[Function]}
                     />
           </div>
           <div
-                    className="column"
+                    className="column false"
           >
                     <Key
                               active={0}
+                              column={12}
+                              row={0}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={12}
+                              row={1}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={12}
+                              row={2}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={12}
+                              row={3}
+                              updateBeat={[Function]}
                     />
           </div>
           <div
-                    className="column"
+                    className="column false"
           >
                     <Key
                               active={0}
+                              column={13}
+                              row={0}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={13}
+                              row={1}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={13}
+                              row={2}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={13}
+                              row={3}
+                              updateBeat={[Function]}
                     />
           </div>
           <div
-                    className="column"
+                    className="column false"
           >
                     <Key
                               active={0}
+                              column={14}
+                              row={0}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={14}
+                              row={1}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={14}
+                              row={2}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={14}
+                              row={3}
+                              updateBeat={[Function]}
                     />
           </div>
           <div
-                    className="column"
+                    className="column false"
           >
                     <Key
                               active={0}
+                              column={15}
+                              row={0}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={15}
+                              row={1}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={15}
+                              row={2}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={15}
+                              row={3}
+                              updateBeat={[Function]}
                     />
           </div>
 </div>,
@@ -985,259 +1563,451 @@ ShallowWrapper {
           className="keys"
 >
           <div
-                    className="column"
+                    className="column false"
           >
                     <Key
                               active={0}
+                              column={0}
+                              row={0}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={0}
+                              row={1}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={0}
+                              row={2}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={0}
+                              row={3}
+                              updateBeat={[Function]}
                     />
           </div>
           <div
-                    className="column"
+                    className="column false"
           >
                     <Key
                               active={0}
+                              column={1}
+                              row={0}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={1}
+                              row={1}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={1}
+                              row={2}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={1}
+                              row={3}
+                              updateBeat={[Function]}
                     />
           </div>
           <div
-                    className="column"
+                    className="column false"
           >
                     <Key
                               active={0}
+                              column={2}
+                              row={0}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={2}
+                              row={1}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={2}
+                              row={2}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={2}
+                              row={3}
+                              updateBeat={[Function]}
                     />
           </div>
           <div
-                    className="column"
+                    className="column false"
           >
                     <Key
                               active={0}
+                              column={3}
+                              row={0}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={3}
+                              row={1}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={3}
+                              row={2}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={3}
+                              row={3}
+                              updateBeat={[Function]}
                     />
           </div>
           <div
-                    className="column"
+                    className="column false"
           >
                     <Key
                               active={0}
+                              column={4}
+                              row={0}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={4}
+                              row={1}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={4}
+                              row={2}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={4}
+                              row={3}
+                              updateBeat={[Function]}
                     />
           </div>
           <div
-                    className="column"
+                    className="column false"
           >
                     <Key
                               active={0}
+                              column={5}
+                              row={0}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={5}
+                              row={1}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={5}
+                              row={2}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={5}
+                              row={3}
+                              updateBeat={[Function]}
                     />
           </div>
           <div
-                    className="column"
+                    className="column false"
           >
                     <Key
                               active={0}
+                              column={6}
+                              row={0}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={6}
+                              row={1}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={6}
+                              row={2}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={6}
+                              row={3}
+                              updateBeat={[Function]}
                     />
           </div>
           <div
-                    className="column"
+                    className="column false"
           >
                     <Key
                               active={0}
+                              column={7}
+                              row={0}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={7}
+                              row={1}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={7}
+                              row={2}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={7}
+                              row={3}
+                              updateBeat={[Function]}
                     />
           </div>
           <div
-                    className="column"
+                    className="column false"
           >
                     <Key
                               active={0}
+                              column={8}
+                              row={0}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={8}
+                              row={1}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={8}
+                              row={2}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={8}
+                              row={3}
+                              updateBeat={[Function]}
                     />
           </div>
           <div
-                    className="column"
+                    className="column false"
           >
                     <Key
                               active={0}
+                              column={9}
+                              row={0}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={9}
+                              row={1}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={9}
+                              row={2}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={9}
+                              row={3}
+                              updateBeat={[Function]}
                     />
           </div>
           <div
-                    className="column"
+                    className="column false"
           >
                     <Key
                               active={0}
+                              column={10}
+                              row={0}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={10}
+                              row={1}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={10}
+                              row={2}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={10}
+                              row={3}
+                              updateBeat={[Function]}
                     />
           </div>
           <div
-                    className="column"
+                    className="column false"
           >
                     <Key
                               active={0}
+                              column={11}
+                              row={0}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={11}
+                              row={1}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={11}
+                              row={2}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={11}
+                              row={3}
+                              updateBeat={[Function]}
                     />
           </div>
           <div
-                    className="column"
+                    className="column false"
           >
                     <Key
                               active={0}
+                              column={12}
+                              row={0}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={12}
+                              row={1}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={12}
+                              row={2}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={12}
+                              row={3}
+                              updateBeat={[Function]}
                     />
           </div>
           <div
-                    className="column"
+                    className="column false"
           >
                     <Key
                               active={0}
+                              column={13}
+                              row={0}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={13}
+                              row={1}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={13}
+                              row={2}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={13}
+                              row={3}
+                              updateBeat={[Function]}
                     />
           </div>
           <div
-                    className="column"
+                    className="column false"
           >
                     <Key
                               active={0}
+                              column={14}
+                              row={0}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={14}
+                              row={1}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={14}
+                              row={2}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={14}
+                              row={3}
+                              updateBeat={[Function]}
                     />
           </div>
           <div
-                    className="column"
+                    className="column false"
           >
                     <Key
                               active={0}
+                              column={15}
+                              row={0}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={15}
+                              row={1}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={15}
+                              row={2}
+                              updateBeat={[Function]}
                     />
                     <Key
                               active={0}
+                              column={15}
+                              row={3}
+                              updateBeat={[Function]}
                     />
           </div>
 </div>,
@@ -1329,7 +2099,8 @@ ShallowWrapper {
             ],
           ]
     }
-    columns={[Function]}
+    currentStep={0}
+    status="stop"
     updateBeat={[Function]}
 />,
 }

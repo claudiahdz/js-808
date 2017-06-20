@@ -1,23 +1,20 @@
 import React from 'react'
-import { shallow } from 'enzyme'
-import Keys from 'components/Keys/Keys'
+import { shallow, render, mount } from 'enzyme'
+import Keys from './Keys'
+import Key from 'components/Keys/Keys'
 
 describe('Keys', () => {
   const defaultProps = {
     beat: Array(4).fill(Array(16).fill(0)),
-    columns: () => {},
     updateBeat: () => {},
+    status: 'stop',
+    currentStep: 0,
   }
 
-  it('renders 64 keys', () => {
-    const props = {
-      ...defaultProps,
-    }
-
-    const keys = shallow(
-      <Keys {...props} />
-    )
+  it('renders the component correctly', () => {
+    const props = { ...defaultProps }
+    const keys = shallow(<Keys {...props} />)
     expect(keys).toMatchSnapshot()
   })
+  
 })
-
