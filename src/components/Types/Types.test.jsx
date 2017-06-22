@@ -4,6 +4,7 @@ import Types from './Types'
 
 describe('Types', () => {
   const defaultProps = {
+    volumes: [100,100,100,100],
     changeVolume: () => {}
   }
 

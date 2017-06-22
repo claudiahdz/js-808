@@ -16,9 +16,9 @@ ShallowWrapper {
     >
         Kick
         <input
-            defaultValue="100"
             onChange={[Function]}
             type="range"
+            value={100}
         />
     </div>
     <div
@@ -26,9 +26,9 @@ ShallowWrapper {
     >
         Snare
         <input
-            defaultValue="100"
             onChange={[Function]}
             type="range"
+            value={100}
         />
     </div>
     <div
@@ -36,9 +36,9 @@ ShallowWrapper {
     >
         Open Hat
         <input
-            defaultValue="100"
             onChange={[Function]}
             type="range"
+            value={100}
         />
     </div>
     <div
@@ -46,9 +46,9 @@ ShallowWrapper {
     >
         Closed Hat
         <input
-            defaultValue="100"
             onChange={[Function]}
             type="range"
+            value={100}
         />
     </div>
 </div>,
@@ -61,9 +61,9 @@ ShallowWrapper {
       >
             Kick
             <input
-                  defaultValue="100"
                   onChange={[Function]}
                   type="range"
+                  value={100}
             />
       </div>
       <div
@@ -71,9 +71,9 @@ ShallowWrapper {
       >
             Snare
             <input
-                  defaultValue="100"
                   onChange={[Function]}
                   type="range"
+                  value={100}
             />
       </div>
       <div
@@ -81,9 +81,9 @@ ShallowWrapper {
       >
             Open Hat
             <input
-                  defaultValue="100"
                   onChange={[Function]}
                   type="range"
+                  value={100}
             />
       </div>
       <div
@@ -91,9 +91,9 @@ ShallowWrapper {
       >
             Closed Hat
             <input
-                  defaultValue="100"
                   onChange={[Function]}
                   type="range"
+                  value={100}
             />
       </div>
 </div>,
@@ -106,6 +106,14 @@ ShallowWrapper {
       "_context": Object {},
       "_currentElement": <Types
         changeVolume={[Function]}
+        volumes={
+                Array [
+                        100,
+                        100,
+                        100,
+                        100,
+                      ]
+        }
 />,
       "_debugID": 1,
       "_hostContainerInfo": null,
@@ -115,6 +123,12 @@ ShallowWrapper {
         "context": Object {},
         "props": Object {
           "changeVolume": [Function],
+          "volumes": Array [
+            100,
+            100,
+            100,
+            100,
+          ],
         },
         "refs": Object {},
         "state": null,
@@ -144,9 +158,9 @@ ShallowWrapper {
           >
                     Kick
                     <input
-                              defaultValue="100"
                               onChange={[Function]}
                               type="range"
+                              value={100}
                     />
           </div>
           <div
@@ -154,9 +168,9 @@ ShallowWrapper {
           >
                     Snare
                     <input
-                              defaultValue="100"
                               onChange={[Function]}
                               type="range"
+                              value={100}
                     />
           </div>
           <div
@@ -164,9 +178,9 @@ ShallowWrapper {
           >
                     Open Hat
                     <input
-                              defaultValue="100"
                               onChange={[Function]}
                               type="range"
+                              value={100}
                     />
           </div>
           <div
@@ -174,9 +188,9 @@ ShallowWrapper {
           >
                     Closed Hat
                     <input
-                              defaultValue="100"
                               onChange={[Function]}
                               type="range"
+                              value={100}
                     />
           </div>
 </div>,
@@ -189,9 +203,9 @@ ShallowWrapper {
           >
                     Kick
                     <input
-                              defaultValue="100"
                               onChange={[Function]}
                               type="range"
+                              value={100}
                     />
           </div>
           <div
@@ -199,9 +213,9 @@ ShallowWrapper {
           >
                     Snare
                     <input
-                              defaultValue="100"
                               onChange={[Function]}
                               type="range"
+                              value={100}
                     />
           </div>
           <div
@@ -209,9 +223,9 @@ ShallowWrapper {
           >
                     Open Hat
                     <input
-                              defaultValue="100"
                               onChange={[Function]}
                               type="range"
+                              value={100}
                     />
           </div>
           <div
@@ -219,9 +233,9 @@ ShallowWrapper {
           >
                     Closed Hat
                     <input
-                              defaultValue="100"
                               onChange={[Function]}
                               type="range"
+                              value={100}
                     />
           </div>
 </div>,
@@ -238,6 +252,14 @@ ShallowWrapper {
   "root": [Circular],
   "unrendered": <Types
     changeVolume={[Function]}
+    volumes={
+        Array [
+            100,
+            100,
+            100,
+            100,
+          ]
+    }
 />,
 }
 `;

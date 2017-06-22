@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow, render, mount } from 'enzyme'
+import { shallow } from 'enzyme'
 import Controls from './Controls'
 
 describe('Controls', () => {
@@ -19,7 +19,7 @@ describe('Controls', () => {
     expect(controls).toMatchSnapshot()
   })
 
-  it('plays beat', () => {
+  it('calls play when clicked', () => {
     const props = { 
       ...defaultProps,
       play: jest.fn()
@@ -31,7 +31,7 @@ describe('Controls', () => {
     expect(props.play).toHaveBeenCalled()
   })
 
-  it('pauses beat', () => {
+  it('calls pause when clicked', () => {
     const props = { 
       ...defaultProps,
       status: 'play',
@@ -44,7 +44,7 @@ describe('Controls', () => {
     expect(props.pause).toHaveBeenCalled()
   })
 
-  it('stops beat', () => {
+  it('call stop when clicked', () => {
     const props = { 
       ...defaultProps,
       stop: jest.fn()
@@ -56,7 +56,7 @@ describe('Controls', () => {
     expect(props.stop).toHaveBeenCalled()
   })
 
-  it('changes tempo', () => {
+  it('calss changeTempo when clicked', () => {
     const props = { 
       ...defaultProps,
       changeTempo: jest.fn()
@@ -70,7 +70,7 @@ describe('Controls', () => {
     expect(props.changeTempo).toHaveBeenCalled()
   })
 
-  it('changes beat', () => {
+  it('calls changeBeat when clicked', () => {
     const props = { 
       ...defaultProps,
       changeBeat: jest.fn()
@@ -84,7 +84,7 @@ describe('Controls', () => {
     expect(props.changeBeat).toHaveBeenCalled()
   })
 
-  it('clears beat', () => {
+  it('calls clear when clicked', () => {
     const props = { 
       ...defaultProps,
       clear: jest.fn()

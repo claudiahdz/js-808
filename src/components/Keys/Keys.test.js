@@ -16,5 +16,4 @@ describe('Keys', () => {
     const keys = shallow(<Keys {...props} />)
     expect(keys).toMatchSnapshot()
   })
-  
 })
