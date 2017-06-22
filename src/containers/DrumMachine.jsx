@@ -17,6 +17,7 @@ class DrumMachine extends Component {
       beat: sequences[0],
       currentStep: 0,
       tempo: 60,
+      volumes: [100,100,100,100],
       status: 'stop' 
     }
   }
@@ -63,7 +64,7 @@ class DrumMachine extends Component {
 
   clear = () => {
     this.stop()
-    this.setState({ tempo: 60 })
+    this.setState({ tempo: 60, volumes: [100,100,100,100] })
     this.changeBeat(Array(4).fill(Array(16).fill(0)).map(r => r.slice()))
   }
 
@@ -89,11 +90,14 @@ class DrumMachine extends Component {
 
   changeVolume = (sound, v) => {
     const volume = v * .01
+    let { volumes } = this.state
+    volumes[sound] = v
+    this.setState({ volumes: volumes })
     sounds[sound].volume(volume)
   }
 
   render() {
-    const { beat, currentStep, status, tempo } = this.state
+    const { beat, currentStep, status, tempo, volumes } = this.state
 
     return (
       <div className="container">
@@ -111,7 +115,8 @@ class DrumMachine extends Component {
         <div className="drum-wrapper">
           <Steps status={status} currentStep={currentStep} />
           <Types 
-            changeVolume={this.changeVolume} 
+            changeVolume={this.changeVolume}
+            volumes={volumes} 
           />
           <Keys 
             beat={beat} 

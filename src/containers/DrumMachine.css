@@ -24,6 +24,11 @@ h1 {
   margin-bottom: 20px;
 }
 
+.buttons span {
+  display: inline-block;
+  width: 80px;
+}
+
 .button {
   display: inline-block;
   min-width: 60px;
