@@ -14,7 +14,7 @@ class DrumMachine extends Component {
     super(props)
     this.interval = null
     this.state = {
-      beat: sequences[0],
+      beat: sequences[0].map(r => r.slice()),
       currentStep: 0,
       tempo: 60,
       volumes: [100,100,100,100],
@@ -91,7 +91,7 @@ class DrumMachine extends Component {
   changeVolume = (sound, v) => {
     const volume = v * .01
     let { volumes } = this.state
-    volumes[sound] = v
+    volumes[sound] = +v
     this.setState({ volumes: volumes })
     sounds[sound].volume(volume)
   }

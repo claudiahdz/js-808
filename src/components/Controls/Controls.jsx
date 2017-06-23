@@ -9,7 +9,7 @@ const Controls = ({ status, play, stop, pause, clear, changeBeat, changeTempo, t
     <div className="buttons">
       <div className="button" onClick={isPlaying ? pause : play}>{isPlaying ? 'Pause' : 'Play'}</div>
       <div className="button" onClick={stop}>Stop</div>
-      <select className="button" onChange={(e) => changeBeat(sequences[e.target.value])}>
+      <select className="button" onChange={(e) => changeBeat(sequences[e.target.value].map(r => r.slice()))}>
         <option value={0}>4 on the floor</option>
         { sequences.slice(1).map((elem, i) => <option value={++i} key={i}>Sequence {i}</option>) }
       </select>
