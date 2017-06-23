@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
-@import url('https://fonts.googleapis.com/css?family=Crushed');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
 
 body {
   margin: 0;
@@ -8,8 +8,8 @@ body {
 
 h1 {
   margin: 50px 0 30px;
-  font-family: 'Crushed', sans-serif;
-  font-size: 80px;
+  font-family: 'Amatic SC', sans-serif;
+  font-size: 100px;
 }
 
 .container {
@@ -104,8 +104,12 @@ select {
 .types input {
   display: block;
   width: 100%;
-  margin: 10px 0;
+  margin: 10px 0 0;
 }
+
+.type div {
+  font-size: 10px;
+} 
 
 .keys {
   align-items: flex-start;
@@ -147,6 +151,7 @@ select {
   align-items: center;
   background: #e6e6e6;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
 .key::before {
@@ -157,11 +162,17 @@ select {
   border-radius: 2px;
   background: #f3f3f3;
   z-index: 1;
+  transition: all 0.2s ease-in-out;
+}
+
+.key.active {
+  transition: all 0.2s ease-in-out;
 }
 
 .key:first-child.active {
   background: #dcffee;
 }
+
 .key:first-child.active::before {
   background: #c9ffe4;
 }

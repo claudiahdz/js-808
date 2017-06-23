@@ -10,6 +10,7 @@ const Types = ({ changeVolume, volumes }) => {
           <div className="type" key={i}>
             {type}
             <input type="range" value={volumes[i]} onChange={(e) => changeVolume(i, e.target.value)} /> 
+            <div>Volume</div>
           </div>
         )}) 
       }
