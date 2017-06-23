@@ -11,7 +11,7 @@ const Keys = ({ beat, updateBeat, status, currentStep }) => {
 
   // Columns
   for(let i = 0; i < 16; i++) {
-    active = (currentStep === i) && (status === 'play')
+    active = (currentStep === i) && (status === 'play' || status === 'pause')
 
     // Rows
     for(let j = 0; j < 4; j++) { 

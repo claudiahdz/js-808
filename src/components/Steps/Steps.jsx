@@ -6,7 +6,7 @@ const Steps = ({ status, currentStep }) => {
   let steps = []
 
   Array.from(Array(16)).map((elem, i) => {
-    active = (currentStep === i) && (status === 'play')
+    active = (currentStep === i) && (status === 'play' || status === 'pause')
     return steps.push(
       <span key={i} className={active ? 'active' : ''}>
         {i+1}
