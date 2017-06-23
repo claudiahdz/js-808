@@ -27,7 +27,7 @@ const Keys = ({ beat, updateBeat, status, currentStep }) => {
     }
 
     columns.push(
-      <div className={`column ${active && 'active'}`} key={`column${i}`}>
+      <div className={active ? 'column active' : 'column'} key={`column${i}`}>
         {column}
       </div>
     )
