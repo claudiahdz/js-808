@@ -35,6 +35,7 @@ class DrumMachine extends Component {
           sounds[j].play()
         }
       }
+      
       if(currentStep < 15) {
         currentStep++
       } else if(currentStep >= 15) {

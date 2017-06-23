@@ -8,7 +8,7 @@ jest.useFakeTimers()
 
 describe('Drum Machine', () => {
   const defaultState = {
-    beat: sequences[0],
+    beat: sequences[0].map(r => r.slice()),
     currentStep: 0,
     tempo: 60,
     volumes: [100,100,100,100],
@@ -81,7 +81,7 @@ describe('Drum Machine', () => {
 
 
   it('updates beat', () => {
-    let beat = sequences[0]
+    let beat = sequences[0].map(r => r.slice())
     beat[0][0] = 0
     const state = {
       ...defaultState,
