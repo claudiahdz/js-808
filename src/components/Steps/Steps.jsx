@@ -8,7 +8,7 @@ const Steps = ({ status, currentStep }) => {
   Array.from(Array(16)).map((elem, i) => {
     active = (currentStep === i) && (status === 'play')
     return steps.push(
-      <span key={i} className={`${active && 'active'}`}>
+      <span key={i} className={active ? 'active' : ''}}>
         {i+1}
       </span>
     )

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 const Key = ({ active, updateBeat, row, column }) => {
   return (
     <div 
-      className={`key ${active && 'active'}`} 
+      className={active ? 'key active' : 'key'} 
       onClick={() => updateBeat(row, column)}
     >
     </div>
