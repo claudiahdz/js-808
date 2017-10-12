@@ -6,11 +6,11 @@
     "enzyme": "^2.8.2",
     "howler": "^2.0.4",
     "prop-types": "^15.5.10",
-    "react": "^15.6.0",
-    "react-dom": "^15.6.0"
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
   },
   "devDependencies": {
-    "react-addons-test-utils": "^15.6.0",
+    "react-addons-test-utils": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.7",
     "react-test-renderer": "^15.6.1"
